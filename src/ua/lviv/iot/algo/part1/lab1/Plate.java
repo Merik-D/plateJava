@@ -42,11 +42,11 @@ public class Plate {
 
     public static void main(String[] args) {
         Plate[] plates = {
-                new ua.lviv.iot.algo.part1.lab1.Plate(),
-                new ua.lviv.iot.algo.part1.lab1.Plate(22, "Ceramic", "Red", false, true),
+                new Plate(),
+                new Plate(22, "Ceramic", "Red", false, true),
                 getInstance(),
                 getInstance()};
-        for (ua.lviv.iot.algo.part1.lab1.Plate plate : plates) {
+        for (Plate plate : plates) {
             System.out.println(plate);
         }
     }
