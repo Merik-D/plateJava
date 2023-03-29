@@ -29,10 +29,10 @@ public class PlateManager {
         plateManager.addPlate(new SaladPlate(24, "Faience", "Gray", true, true, "oval", true));
         plateManager.addPlate(new SaladPlate(30, "Porcelain", "Black", false, true, "rectangel", true));
         plateManager.addPlate(new SoupPlate(40, "Ceramic", "Gray", true, true, 15, "Mushroom broth"));
-        plateManager.addPlate(new ua.lviv.iot.algo.part1.lab2.PicnicPlate(54, "Faience", "Red", false, true, true, 5));
-        plateManager.addPlate(new ua.lviv.iot.algo.part1.lab2.DessertPlate(60, "Porcelain", "Yellow", true, true, true, 3));
-        plateManager.addPlate(new ua.lviv.iot.algo.part1.lab2.PicnicPlate(74, "Faience", "Red", false, true, true, 7));
-        plateManager.addPlate(new ua.lviv.iot.algo.part1.lab2.DessertPlate(80, "Porcelain", "Pink", true, true, false, 4));
+        plateManager.addPlate(new PicnicPlate(54, "Faience", "Red", false, true, true, 5));
+        plateManager.addPlate(new DessertPlate(60, "Porcelain", "Yellow", true, true, true, 3));
+        plateManager.addPlate(new PicnicPlate(74, "Faience", "Red", false, true, true, 7));
+        plateManager.addPlate(new DessertPlate(80, "Porcelain", "Pink", true, true, false, 4));
 
         plateManager.plateList.forEach(System.out::println);
         System.out.println("\n");
