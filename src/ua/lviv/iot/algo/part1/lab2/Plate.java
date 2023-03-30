@@ -35,5 +35,5 @@ public abstract class Plate {
         hasFood = true;
     }
 
-    abstract double getMaxFoodWeight();
+    public abstract double getMaxFoodWeight();
 }

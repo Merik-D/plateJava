@@ -20,7 +20,7 @@ public class DessertPlate extends Plate {
     }
 
     @Override
-    double getMaxFoodWeight() {
+    public double getMaxFoodWeight() {
         return (3.14 * getDiameter()/2 * (getDiameter() / 2) * (getDiameter() / 2)) / 3;
     }
 }
