@@ -1,9 +1,9 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab2;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 @Getter
@@ -11,17 +11,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Plate {
-    private static Plate instance = new Plate();
+public abstract class Plate {
     private double diameter;
     private String material;
     private String color;
     private boolean isClean = false;
     private boolean hasFood = false;
-
-    public static Plate getInstance() {
-        return instance;
-    }
 
     public void wash() {
         isClean = true;
@@ -40,14 +35,5 @@ public class Plate {
         hasFood = true;
     }
 
-    public static void main(String[] args) {
-        Plate[] plates = {
-                new Plate(),
-                new Plate(22, "Ceramic", "Red", false, true),
-                getInstance(),
-                getInstance()};
-        for (Plate plate : plates) {
-            System.out.println(plate);
-        }
-    }
+    public abstract double getMaxFoodWeight();
 }
