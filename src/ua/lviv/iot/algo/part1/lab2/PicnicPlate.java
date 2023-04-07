@@ -21,6 +21,6 @@ public class PicnicPlate extends Plate {
 
     @Override
     public double getMaxFoodWeight() {
-        return (3.14 * getDiameter() / 2 * (getDiameter() / 2) * (getDiameter() / 2)) / 2;
+        return 3.14 * getDiameter() * getDiameter() * getDiameter() / 16;
     }
 }
