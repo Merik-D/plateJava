@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,22 +18,23 @@ public abstract class Plate {
     private boolean isClean = false;
     private boolean hasFood = false;
 
-    public void wash() {
+    public final void wash() {
         isClean = true;
     }
 
-    public void dirty() {
+    public final void dirty() {
         isClean = false;
     }
 
-    public void eat() {
+    public final void eat() {
         hasFood = false;
         dirty();
     }
 
-    public void addFood() {
+    public final void addFood() {
         hasFood = true;
     }
 
     public abstract double getMaxFoodWeight();
 }
+

@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,14 +13,20 @@ public class DessertPlate extends Plate {
     private boolean picture;
     private int sections;
 
-    public DessertPlate(double diameter, String material, String color, boolean isClean, boolean hasFood, boolean picture, int sections) {
+    public DessertPlate(final double diameter,
+                        final String material,
+                        final String color,
+                        final boolean isClean,
+                        final boolean hasFood,
+                        final boolean picture,
+                        final int sections) {
         super(diameter, material, color, isClean, hasFood);
         this.picture = picture;
         this.sections = sections;
     }
 
     @Override
-    public double getMaxFoodWeight() {
+    public final double getMaxFoodWeight() {
         return 3.14 * getDiameter() * getDiameter() * getDiameter() / 24;
     }
 }

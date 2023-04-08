@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,14 +13,21 @@ public class SaladPlate extends Plate {
     private String shape;
     private boolean dishwasherSafe;
 
-    public SaladPlate(double diameter, String material, String color, boolean isClean, boolean hasFood, String shape, boolean dishwasherSafe) {
+    public SaladPlate(final double diameter,
+                      final String material,
+                      final String color,
+                      final boolean isClean,
+                      final boolean hasFood,
+                      final String shape,
+                      final boolean dishwasherSafe) {
         super(diameter, material, color, isClean, hasFood);
         this.shape = shape;
         this.dishwasherSafe = dishwasherSafe;
     }
 
     @Override
-    public double getMaxFoodWeight() {
+    public final double getMaxFoodWeight() {
         return 3.14 * getDiameter() * getDiameter() * getDiameter() / 24;
     }
 }
+
