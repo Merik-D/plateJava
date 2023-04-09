@@ -12,7 +12,7 @@ public class DessertPlateTest {
 
     @Before
     public void setUp(){
-        plate = new DessertPlate(40, "Porcelain", "Yellow", true, true, true, 3);
+        plate = new DessertPlate(40, "Porcelain", "Yellow", true, false, true, 3);
     }
 
     @DisplayName("Test wash")
@@ -39,6 +39,7 @@ public class DessertPlateTest {
     @DisplayName("Test eat")
     @Test
     public void testEat(){
+        this.plate.setHasFood(true);
         this.plate.eat();
         assertFalse(plate.isClean());
         assertFalse(plate.isHasFood());
@@ -47,6 +48,6 @@ public class DessertPlateTest {
     @DisplayName("Test weight")
     @Test
     public void testGetMaxFoodWeight(){
-        assertEquals(8373.3, plate.getMaxFoodWeight(), 0.5);
+        assertEquals(8377.58040957, plate.getMaxFoodWeight(), 0.1);
     }
 }

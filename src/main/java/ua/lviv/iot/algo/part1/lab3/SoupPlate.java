@@ -27,7 +27,7 @@ public class SoupPlate extends Plate {
 
     @Override
     public final double getMaxFoodWeight() {
-        return 3.14 * plateDepthInCm * getDiameter() * getDiameter() / 16;
+        return Math.PI * plateDepthInCm * getDiameter() * getDiameter() / 16;
     }
 }
 

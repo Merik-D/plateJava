@@ -39,6 +39,7 @@ public class SoupPlateTest {
     @DisplayName("Test eat")
     @Test
     public void testEat(){
+        this.plate.setHasFood(true);
         this.plate.eat();
         assertFalse(plate.isClean());
         assertFalse(plate.isHasFood());
@@ -47,6 +48,6 @@ public class SoupPlateTest {
     @DisplayName("Test weight")
     @Test
     public void testGetMaxFoodWeight(){
-        assertEquals(282.6, plate.getMaxFoodWeight(), 0.1);
+        assertEquals(282.743338823, plate.getMaxFoodWeight(), 0.1);
     }
 }
