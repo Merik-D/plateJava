@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +28,14 @@ public class SoupPlate extends Plate {
     @Override
     public final double getMaxFoodWeight() {
         return Math.PI * plateDepthInCm * getDiameter() * getDiameter() / 16;
+    }
+
+    public String getHeaders(){
+        return super.getHeaders() + ", plateDepthInCm, typeOfSoup";
+    }
+
+    public String toCSV(){
+        return super.toCSV() + ", " + plateDepthInCm + ", " + typeOfSoup ;
     }
 }
 
