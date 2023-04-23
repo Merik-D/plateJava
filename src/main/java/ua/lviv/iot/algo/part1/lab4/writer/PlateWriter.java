@@ -1,16 +1,20 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.writer;
+
+import ua.lviv.iot.algo.part1.lab4.models.Plate;
 
 import java.io.FileWriter;
-import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class PlateWriter {
-    public String writeToFile(List<Plate> plates) throws IOException {
+    public static final String DEFAULTFILE = "result.csv";
+    public String writeToFile(final List<Plate> plates) {
         if (plates == null || plates.isEmpty()) {
             return null;
         }
-        String defaultFileName = "result.csv";
-        try (FileWriter writer = new FileWriter(defaultFileName)) {
+        Collections.sort(plates, Comparator.comparing(p -> p.getClass().getSimpleName()));
+        try (FileWriter writer = new FileWriter(DEFAULTFILE)) {
             Plate nextPlate = plates.get(0);
             writer.write(plates.get(0).getHeaders() + "\n");
             for (var plate : plates) {
@@ -20,7 +24,9 @@ public class PlateWriter {
                 }
                 writer.write(plate.toCSV() + "\n");
             }
-            return defaultFileName;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
         }
+        return DEFAULTFILE;
     }
 }

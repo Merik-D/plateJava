@@ -1,14 +1,8 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
 public class SoupPlate extends Plate {
     private int plateDepthInCm;
     private String typeOfSoup;
@@ -30,12 +24,11 @@ public class SoupPlate extends Plate {
         return Math.PI * plateDepthInCm * getDiameter() * getDiameter() / 16;
     }
 
-    public String getHeaders(){
+    public final String getHeaders() {
         return super.getHeaders() + ", plateDepthInCm, typeOfSoup";
     }
 
-    public String toCSV(){
+    public final String toCSV() {
         return super.toCSV() + ", " + plateDepthInCm + ", " + typeOfSoup ;
     }
 }
-

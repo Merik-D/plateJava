@@ -1,16 +1,12 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
 @Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public abstract class Plate {
     private double diameter;
     private String material;
@@ -37,12 +33,11 @@ public abstract class Plate {
 
     public abstract double getMaxFoodWeight();
 
-    public String getHeaders(){
+    public String getHeaders() {
         return HEADERS;
     }
 
-    public String toCSV(){
+    public String toCSV() {
         return diameter + ", " + material + ", " + color + ", " + isClean + ", " + hasFood;
     }
 }
-

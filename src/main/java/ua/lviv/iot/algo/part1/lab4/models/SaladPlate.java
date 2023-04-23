@@ -1,14 +1,8 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
 public class SaladPlate extends Plate {
     private String shape;
     private boolean dishwasherSafe;
@@ -30,12 +24,11 @@ public class SaladPlate extends Plate {
         return Math.PI * getDiameter() * getDiameter() * getDiameter() / 24;
     }
 
-    public String getHeaders(){
+    public final String getHeaders() {
         return super.getHeaders() + ", shape, dishwasherSafe";
     }
 
-    public String toCSV(){
+    public final String toCSV() {
         return super.toCSV() + ", " + shape + ", " + dishwasherSafe;
     }
 }
-

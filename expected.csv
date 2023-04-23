@@ -1,13 +1,12 @@
-diameter, material, color, isClean, hasFood, plateDepthInCm, typeOfSoup
-12.0, Ceramic, Red, false, true, 10, borsch
-diameter, material, color, isClean, hasFood, shape, dishwasherSafe
-24.0, Faience, Gray, true, true, oval, true
-30.0, Porcelain, Black, false, true, rectangel, true
-diameter, material, color, isClean, hasFood, plateDepthInCm, typeOfSoup
-40.0, Ceramic, Gray, true, true, 15, Mushroom broth
-diameter, material, color, isClean, hasFood, lid, compartments
-54.0, Faience, Red, false, true, true, 5
-74.0, Faience, Red, false, true, true, 7
 diameter, material, color, isClean, hasFood, picture, sections
 60.0, Porcelain, Yellow, true, true, true, 3
 80.0, Porcelain, Pink, true, true, false, 4
+diameter, material, color, isClean, hasFood, lid, compartments
+54.0, Faience, Red, false, true, true, 5
+74.0, Faience, Red, false, true, true, 7
+diameter, material, color, isClean, hasFood, shape, dishwasherSafe
+24.0, Faience, Gray, true, true, oval, true
+30.0, Porcelain, Black, false, true, rectangle, true
+diameter, material, color, isClean, hasFood, plateDepthInCm, typeOfSoup
+12.0, Ceramic, Red, false, true, 10, borsch
+40.0, Ceramic, Gray, true, true, 15, Mushroom broth

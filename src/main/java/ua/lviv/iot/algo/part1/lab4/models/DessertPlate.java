@@ -1,14 +1,8 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
 public class DessertPlate extends Plate {
     private boolean picture;
     private int sections;
@@ -30,11 +24,11 @@ public class DessertPlate extends Plate {
         return Math.PI * getDiameter() * getDiameter() * getDiameter() / 24;
     }
 
-    public String getHeaders(){
-        return HEADERS + ", picture, sections";
+    public final String getHeaders() {
+        return super.getHeaders() + ", picture, sections";
     }
 
-    public String toCSV(){
+    public final String toCSV() {
         return super.toCSV() + ", " + picture + ", " + sections;
     }
 }

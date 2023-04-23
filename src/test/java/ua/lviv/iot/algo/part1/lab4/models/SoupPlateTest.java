@@ -1,11 +1,11 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.models;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class SoupPlateTest {
     Plate plate;
@@ -39,7 +39,6 @@ public class SoupPlateTest {
     @DisplayName("Test eat")
     @Test
     public void testEat(){
-        this.plate.setHasFood(true);
         this.plate.eat();
         assertFalse(plate.isClean());
         assertFalse(plate.isHasFood());
