@@ -1,18 +1,18 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.models;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SoupPlateTest {
+public class DessertPlateTest {
     Plate plate;
 
     @Before
     public void setUp(){
-        plate = new SoupPlate(12, "Ceramic", "Red", false, true, 10, "borsch");
+        plate = new DessertPlate(40, "Porcelain", "Yellow", true, false, true, 3);
     }
 
     @DisplayName("Test wash")
@@ -39,7 +39,6 @@ public class SoupPlateTest {
     @DisplayName("Test eat")
     @Test
     public void testEat(){
-        this.plate.setHasFood(true);
         this.plate.eat();
         assertFalse(plate.isClean());
         assertFalse(plate.isHasFood());
@@ -48,6 +47,6 @@ public class SoupPlateTest {
     @DisplayName("Test weight")
     @Test
     public void testGetMaxFoodWeight(){
-        assertEquals(282.743338823, plate.getMaxFoodWeight(), 0.1);
+        assertEquals(8377.58040957, plate.getMaxFoodWeight(), 0.1);
     }
 }

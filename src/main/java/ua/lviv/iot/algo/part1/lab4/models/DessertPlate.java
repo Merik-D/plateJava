@@ -1,14 +1,8 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.models;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
 public class DessertPlate extends Plate {
     private boolean picture;
     private int sections;
@@ -28,5 +22,13 @@ public class DessertPlate extends Plate {
     @Override
     public final double getMaxFoodWeight() {
         return Math.PI * getDiameter() * getDiameter() * getDiameter() / 24;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", picture, sections";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + ", " + picture + ", " + sections;
     }
 }

@@ -1,5 +1,6 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.manager;
 
+import ua.lviv.iot.algo.part1.lab4.models.Plate;
 
 import java.util.Collections;
 import java.util.LinkedList;
