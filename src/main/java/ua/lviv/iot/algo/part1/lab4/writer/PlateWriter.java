@@ -13,7 +13,9 @@ public class PlateWriter {
         if (plates == null || plates.isEmpty()) {
             return null;
         }
-        Collections.sort(plates, Comparator.comparing(p -> p.getClass().getSimpleName()));
+        Collections.sort(plates,
+                Comparator.comparing(p -> p.getClass().getSimpleName())
+        );
         try (FileWriter writer = new FileWriter(DEFAULTFILE)) {
             Plate nextPlate = plates.get(0);
             writer.write(plates.get(0).getHeaders() + "\n");
@@ -24,7 +26,7 @@ public class PlateWriter {
                 }
                 writer.write(plate.toCSV() + "\n");
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return DEFAULTFILE;

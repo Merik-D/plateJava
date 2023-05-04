@@ -29,6 +29,6 @@ public class SoupPlate extends Plate {
     }
 
     public final String toCSV() {
-        return super.toCSV() + ", " + plateDepthInCm + ", " + typeOfSoup ;
+        return super.toCSV() + ", " + plateDepthInCm + ", " + typeOfSoup;
     }
 }

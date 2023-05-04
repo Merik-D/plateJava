@@ -1,5 +1,6 @@
 package ua.lviv.iot.algo.part1.lab4.writer;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ua.lviv.iot.algo.part1.lab4.models.DessertPlate;
@@ -28,6 +29,11 @@ public class PlateWriterTest {
     @BeforeEach
     public void setUp() throws IOException {
         writer = new PlateWriter();
+        Files.deleteIfExists(Path.of(RESULT_FILENAME));
+    }
+
+    @AfterEach
+    public void tearDown() throws IOException {
         Files.deleteIfExists(Path.of(RESULT_FILENAME));
     }
 
