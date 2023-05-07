@@ -1,11 +1,16 @@
-package ua.lviv.iot.algo.part1.lab4.models;
+package ua.lviv.iot.algo.part1.lab6.models;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 public class DessertPlate extends Plate {
     private boolean picture;
     private int sections;
+    @Setter
+    @Getter
+    private Integer id;
 
     public DessertPlate(final double diameter,
                         final String material,

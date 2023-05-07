@@ -1,13 +1,13 @@
-package ua.lviv.iot.algo.part1.lab4.manager;
+package ua.lviv.iot.algo.part1.lab6.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.algo.part1.lab4.models.DessertPlate;
-import ua.lviv.iot.algo.part1.lab4.models.PicnicPlate;
-import ua.lviv.iot.algo.part1.lab4.models.Plate;
-import ua.lviv.iot.algo.part1.lab4.models.SaladPlate;
-import ua.lviv.iot.algo.part1.lab4.models.SoupPlate;
+import ua.lviv.iot.algo.part1.lab6.models.DessertPlate;
+import ua.lviv.iot.algo.part1.lab6.models.PicnicPlate;
+import ua.lviv.iot.algo.part1.lab6.models.Plate;
+import ua.lviv.iot.algo.part1.lab6.models.SaladPlate;
+import ua.lviv.iot.algo.part1.lab6.models.SoupPlate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
