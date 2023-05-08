@@ -1,6 +1,5 @@
 package ua.lviv.iot.algo.part1.lab6.service;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import ua.lviv.iot.algo.part1.lab6.models.DessertPlate;
@@ -8,15 +7,13 @@ import ua.lviv.iot.algo.part1.lab6.models.DessertPlate;
 import java.util.*;
 
 @Service
-@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+@Scope("singleton")
 public class DessertPlateService {
     private Map<Integer, DessertPlate> dessertPlates = new HashMap<>();
     private int nextAvailableId = 1;
 
     public DessertPlate addDessertPlate(DessertPlate dessertPlate) {
-        if (dessertPlate.getId() == null) {
-            dessertPlate.setId((Integer) nextAvailableId++);
-        }
+        dessertPlate.setId((Integer) nextAvailableId++);
         dessertPlates.put(dessertPlate.getId(), dessertPlate);
         return dessertPlate;
     }
