@@ -1,11 +1,17 @@
-package ua.lviv.iot.algo.part1.lab4.models;
+package ua.lviv.iot.algo.part1.lab6.models;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @NoArgsConstructor
 public class DessertPlate extends Plate {
     private boolean picture;
     private int sections;
+    @Setter
+    @Getter
+    private Integer id;
 
     public DessertPlate(final double diameter,
                         final String material,
@@ -24,6 +30,7 @@ public class DessertPlate extends Plate {
         return Math.PI * getDiameter() * getDiameter() * getDiameter() / 24;
     }
 
+    @JsonIgnore
     public final String getHeaders() {
         return super.getHeaders() + ", picture, sections";
     }

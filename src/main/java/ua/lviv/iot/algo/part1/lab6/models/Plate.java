@@ -1,8 +1,9 @@
-package ua.lviv.iot.algo.part1.lab4.models;
+package ua.lviv.iot.algo.part1.lab6.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Getter
 @AllArgsConstructor
@@ -33,6 +34,7 @@ public abstract class Plate {
 
     public abstract double getMaxFoodWeight();
 
+    @JsonIgnore
     public String getHeaders() {
         return HEADERS;
     }
